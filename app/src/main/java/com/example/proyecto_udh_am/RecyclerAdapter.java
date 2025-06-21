@@ -1,5 +1,6 @@
 package com.example.proyecto_udh_am;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -37,7 +38,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.textView1.setText(listaHabitos.get(position).getNombre());
-        holder.textView2.setText(listaHabitos.get(position).getFrecuencia());
+        holder.textView2.setText("Cada " + listaHabitos.get(position).getFrecuencia());
 
         int posterId = listaHabitos.get(position).getPoster();
 
@@ -71,8 +72,8 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             Toast.makeText(v.getContext(),
                     listaHabitos.get(getAdapterPosition()).getNombre(),
                     Toast.LENGTH_LONG).show();
-            // Intent intent = new Intent(v.getContext(), MainActivity2.class);
-            // v.getContext().startActivity(intent);
+            Intent intent = new Intent(v.getContext(), MostrarHabito.class);
+            v.getContext().startActivity(intent);
         }
     }
 }

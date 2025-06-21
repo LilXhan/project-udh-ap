@@ -1,6 +1,9 @@
 package com.example.proyecto_udh_am;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,4 +46,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(recyclerAdapter);
     }
+
+    public void nuevoHabito(View v) {
+        Intent intent = new Intent(v.getContext(), CrearHabito.class);
+        v.getContext().startActivity(intent);
+    }
+
 }

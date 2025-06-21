@@ -13,10 +13,13 @@
         android:theme="@style/Theme.Proyectoudham"
         tools:targetApi="31">
         <activity
-            android:name=".RecyclerAdapter"
+            android:name=".CrearHabito"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".MostrarHabito"
+            android:exported="false" />
+        <activity
+            android:name=".RecyclerAdapter"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
