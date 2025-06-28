@@ -69,10 +69,19 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
 
         @Override
         public void onClick(View v) {
+
+            Habito habito = listaHabitos.get(getAdapterPosition());
+
             Toast.makeText(v.getContext(),
                     listaHabitos.get(getAdapterPosition()).getNombre(),
                     Toast.LENGTH_LONG).show();
             Intent intent = new Intent(v.getContext(), MostrarHabito.class);
+            intent.putExtra("nombre", habito.getNombre());
+            intent.putExtra("frecuencia", habito.getFrecuencia());
+            intent.putExtra("fechaInicio", habito.getFechaInicio());
+            intent.putExtra("fechaFin", habito.getFechaFin());
+            intent.putExtra("horario", habito.getHorario());
+            intent.putExtra("poster", habito.getPoster());
             v.getContext().startActivity(intent);
         }
     }

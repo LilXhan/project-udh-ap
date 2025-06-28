@@ -14,6 +14,7 @@ public class Habito {
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.poster = poster;
+        this.horario = horario;
     }
 
     public String getNombre() {

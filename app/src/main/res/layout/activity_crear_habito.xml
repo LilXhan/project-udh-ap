@@ -7,4 +7,142 @@
     android:layout_height="match_parent"
     tools:context=".CrearHabito">
 
+    <RadioGroup
+        android:id="@+id/rgHabitos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/etFrecuencia">
+
+        <RadioButton
+            android:id="@+id/correr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correr" />
+
+        <RadioButton
+            android:id="@+id/caminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Caminar" />
+
+        <RadioButton
+            android:id="@+id/nadar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nadar" />
+
+        <RadioButton
+            android:id="@+id/futbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Futbol" />
+
+        <RadioButton
+            android:id="@+id/boxeo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boxeo" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etFrecuencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Frecuencia (días)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/etFechaInicio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etFechaInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:ems="10"
+        android:hint="Fecha inicio dd/mm/yy"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/etFechaFin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etFechaFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Fecha fin dd/mm/yy"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/etHorario"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Horario (X:XX pm / am)"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:textStyle="bold"
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="272dp"
+        android:onClick="crear"
+        android:text="Crear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Escoge tu habito:"
+        app:layout_constraintBottom_toTopOf="@+id/rgHabitos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:textStyle="bold"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear nuevo habito"
+        android:textSize="100px"
+        app:layout_constraintBottom_toTopOf="@+id/rgHabitos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.217" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volver al Inicio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:onClick="irInicio"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.904" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
