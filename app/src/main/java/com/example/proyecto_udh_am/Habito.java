@@ -1,6 +1,7 @@
 package com.example.proyecto_udh_am;
 
 public class Habito {
+    private String id;
     private String nombre;
     private String frecuencia;
     private String fechaInicio;
@@ -8,13 +9,22 @@ public class Habito {
     private String horario;
     private int poster;
 
-    public Habito(String nombre, String frecuencia, String fechaInicio, String fechaFin, String horario, int poster) {
+    public Habito(String nombre, String frecuencia, String fechaInicio, String fechaFin, String horario, int poster, String id) {
         this.nombre = nombre;
         this.frecuencia = frecuencia;
         this.fechaInicio = fechaInicio;
         this.fechaFin = fechaFin;
         this.poster = poster;
         this.horario = horario;
+        this.id = id;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getNombre() {

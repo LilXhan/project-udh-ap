@@ -14,6 +14,8 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class CrearHabito extends AppCompatActivity {
 
     RadioButton rbHabito;
@@ -40,6 +42,9 @@ public class CrearHabito extends AppCompatActivity {
     }
 
     public void crear(View v) {
+
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
         String frecuencia = etFrecuencia.getText().toString();
         String fechaInicio = etFechaInicio.getText().toString();
         String fechaFin = etFechaFin.getText().toString();
